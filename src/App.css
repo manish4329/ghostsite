@@ -1,38 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Limbu&family=Roboto:wght@300&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .App {
-  text-align: center;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background: #7844c2;
+	position: absolute;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Main {
+	background-color: white;
+	position: absolute;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	height: 93vh;
+	width: 92vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar {
+	display: flex;
+	height: 15%;
+	width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Body {
+	position: absolute;
+	display: flex;
+	background-image: url('../public/Ghostbackground.jpeg');
+	background-size: cover;
+	height: 85%;
+	width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a {
+	padding: 0.5rem 2rem;
+	text-decoration: none;
+	color: rgb(128, 128, 128);
+	border-radius: 30px;
+	font-family: 'Noto Sans Limbu', sans-serif;
+}
+
+nav a:hover {
+	background-color: #7844c2;
+	color: whitesmoke;
+}
+
+header .nav-btn {
+	padding-top: 10px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: rgb(33, 31, 31);
+	visibility: visible;
+	opacity: 1;
+	font-size: 1.8rem;
+}
+
+header .nav-close-btn {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: rgb(33, 31, 31);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+	header .nav-close-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: #7844c2;
+		transition: 0.5s;
+		transform: translateY(-100vh);
+	}
+
+	header .responsive_nav {
+		transform: none;
+	}
+}
+
+.SignIn {
+	display: flex;
+	padding: 50px;
+	position: absolute;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	background-color: white;
+	opacity: 0.7;
+	margin: 70px;
+	border-radius: 20px;
+	font-family: 'Noto Sans Limbu', sans-serif;
+}
+
+Form {
+	display: flex;
+	flex-direction: column;
+}
+
+Form label {
+	font-family: 'Noto Sans Limbu', sans-serif;
+	font-size: small;
+	padding: 10px 0;
+}
+
+Form button {
+	margin-top: 10px;
+	height: 40px;
+	width: 110px;
+	border-radius: 10px;
+	background-color: rgb(0, 0, 0);
+	color: white;
+}
+
+Form input {
+	height: 34px;
+	width: 15rem;
+	border-radius: 10px;
+	background: white;
+}
+
+.SignIn h1 {
+	font-size: 50px;
+}
+
+.SignInlogo {
+	display: flex;
+	justify-content: space-between;
+	font-family: 'Noto Sans Limbu', sans-serif;
+}
+
+.SignInlogo a {
+	padding-left: 120px;
+	font-family: 'Noto Sans Limbu', sans-serif;
+	text-decoration: none;
+	font-size: x-small;
+}
+
+.googleSignIn {
+	display: flex;
+	padding: 20px 0;
+}
+
+.googleBtn {
+	display: flex;
+	align-items: center;
+	background-color: rgb(25, 77, 220);
+	border-radius: 10px;
+	color: white;
+	padding: 10px 20px;
+}
+
+.googleBtn h2 {
+	padding-right: 10px;
+}
+
+.ballBtn {
+	border-radius: 10px;
+	padding: 10px;
+	margin-left: 15px;
+	background-color: plum;
 }
